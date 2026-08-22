@@ -14,37 +14,37 @@ The objective of this project is to strengthen practical networking skills throu
 
 ### 1. Network Topology
 
-![Network Topology](screenshots/01-network-topology.png)
+![Network Topology](screenshots/01-topology.png)
 
 ---
 
-### 2. OSPF IP Configuration
+### 2. OSPF Neighbor Relationship
 
-![OSPF IP Configuration](screenshots/02-ospf-ip-configuration.png)
-
----
-
-### 3. OSPF Neighbor Relationship
-
-![OSPF Neighbor Relationship](screenshots/03-ospf-neighbor.png)
+![OSPF Neighbor Relationship](screenshots/02-ospf-neighbors.png)
 
 ---
 
-### 4. OSPF Configuration
+### 3. Routing Table Before Failure
 
-![OSPF Configuration](screenshots/04-ospf-configuration.png)
-
----
-
-### 5. OSPF Failover Verification
-
-![OSPF Failover](screenshots/05-ospf-failover.png)
+![Routing Table Before Failure](screenshots/03-routing-before-failure.png)
 
 ---
 
-### 6. End-to-End Connectivity Test
+### 4. Link Failure Simulation
 
-![End-to-End Connectivity](screenshots/06-connectivity-test.png)
+![Link Failure](screenshots/04-link-failure.png)
+
+---
+
+### 5. OSPF Failover Routing
+
+![OSPF Failover Routing](screenshots/05-failover-routing.png)
+
+---
+
+### 6. End-to-End Connectivity Testing
+
+![Connectivity Testing](screenshots/06-connectivity-testing.png)
 
 ---
 
