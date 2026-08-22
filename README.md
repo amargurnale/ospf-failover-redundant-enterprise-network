@@ -88,7 +88,7 @@ The objective of this project is to strengthen practical networking skills throu
 - Alternate path selection
 - Routing table verification
 - End-to-end connectivity testing
-- Network recovery and troubleshooting
+- Link recovery
 - Cisco IOS configuration
 
 ---
@@ -101,11 +101,7 @@ show ip ospf neighbor
 
 show ip route
 
-show ip protocols
-
 show ip ospf interface brief
-
-show running-config
 
 ping
 
@@ -115,13 +111,15 @@ tracert
 
 ## Failover Testing
 
-The primary routing path was intentionally interrupted to simulate a network link failure.
+The primary link between R1 and R2 was intentionally shut down to simulate a network link failure.
 
-After the failure, OSPF detected the topology change and recalculated the available routes. Traffic was automatically redirected through the alternate routing path.
+After the link failure, the OSPF neighbor relationship between R1 and R2 went down.
 
-The network was then restored and OSPF neighbor relationships were verified again.
+OSPF recalculated the available route and traffic was redirected through the alternate path:
 
-This demonstrates how dynamic routing and redundant paths can maintain network connectivity during link failures.
+PC1 → R1 → R3 → R4 → PC2
+
+After restoring the R1-R2 link, the OSPF neighbor relationship was established again and the original path became available.
 
 ---
 
@@ -129,7 +127,7 @@ This demonstrates how dynamic routing and redundant paths can maintain network c
 
 Successfully designed and configured a redundant enterprise network using OSPF dynamic routing.
 
-The project demonstrated OSPF neighbor establishment, dynamic route learning, routing redundancy, primary link failure simulation, automatic failover, alternate path selection, and end-to-end connectivity verification.
+The project demonstrated OSPF neighbor establishment, dynamic route learning, routing redundancy, primary link failure simulation, automatic failover, alternate path selection, link recovery, and end-to-end connectivity verification.
 
 Network behavior was verified using OSPF neighbor states, routing tables, ping, and traceroute.
 
@@ -147,6 +145,4 @@ Network behavior was verified using OSPF neighbor states, routing tables, ping, 
 - Network Failover
 - Cisco IOS CLI
 - Routing Table Verification
-- Network Troubleshooting
 - Ping and Traceroute Analysis
-- CCNA Practical Skills
