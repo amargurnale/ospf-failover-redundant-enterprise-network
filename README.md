@@ -2,11 +2,11 @@
 
 ## Overview
 
-This project demonstrates the design and implementation of a redundant enterprise network using Cisco Packet Tracer and the OSPF (Open Shortest Path First) dynamic routing protocol.
+This project demonstrates the design and implementation of a redundant enterprise network using Cisco Packet Tracer and OSPF (Open Shortest Path First).
 
-The network is designed with multiple routing paths to provide redundancy and maintain connectivity during a network link failure. OSPF dynamically detects the topology change, recalculates the available route, and redirects traffic through the alternate path.
+The network uses multiple routing paths between routers to provide redundancy. OSPF is configured to dynamically learn routes and select an alternate path when the primary routing link fails.
 
-The objective of this project is to strengthen practical networking skills through hands-on OSPF configuration, redundant network design, failover testing, routing verification, and end-to-end connectivity testing.
+The project includes OSPF configuration, neighbor verification, routing table verification, link failure simulation, OSPF failover, link recovery, and end-to-end connectivity testing.
 
 ---
 
@@ -50,8 +50,8 @@ The objective of this project is to strengthen practical networking skills throu
 
 ## Network Topology
 
-- 4 Cisco Routers
-- 2 Cisco 2960 Switches
+- 4 Cisco 2911 Routers
+- 2 Cisco 2960-24TT Switches
 - 2 PCs
 - Multiple IPv4 Networks
 - Redundant Routing Paths
@@ -69,8 +69,6 @@ The objective of this project is to strengthen practical networking skills throu
 - Subnetting
 - Wildcard Masks
 - Dynamic Routing
-- Routing Redundancy
-- Network Failover
 - Cisco IOS
 - Routing & Switching
 
@@ -89,28 +87,20 @@ The objective of this project is to strengthen practical networking skills throu
 - Alternate path selection
 - Routing table verification
 - End-to-end connectivity testing
-- Network recovery and troubleshooting
+- Link recovery
 - Cisco IOS configuration
 
 ---
 
 ## Verification Commands
 
+```bash
 show ip interface brief
-
 show ip ospf neighbor
-
 show ip route
-
 show ip protocols
-
 show ip ospf interface brief
-
 show running-config
-
-ping
-
-tracert
 
 ---
 
